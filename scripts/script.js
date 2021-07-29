@@ -81,10 +81,11 @@ function createListRow(index, category, description){
             ${description}
         </div>
         <div class="col-1">
-            <input type="button" class="btn btn-success" value="Mark Done">
+            <input id="mark-done-checkbox" type="checkbox" onchange="markDone(this, ${index})" class="btn-check" aria-label="mark-done">
+            <label for="mark-done-checkbox" class="mark-done btn btn-success bi bi-check-circle-fill"></label>
         </div>
         <div class="col-1">
-            <input type="button" onclick="deleteItem(${index})" class="btn btn-danger delete-item" value="Delete">
+            <button type="button" onclick="deleteItem(${index})" class="btn btn-danger delete-item bi bi-trash-fill" aria-label="Delete Item"></button>
         </div>
     </div>`
     return gridRow;
@@ -99,4 +100,21 @@ function deleteItem(index){
 
 function getUniqueId(){ //inutil right now
     return _uniqueId + 1;
+}
+
+function markDone(btn, index){
+    let row = btn.parentElement.parentElement;
+    if(btn.checked){
+        btn.parentElement.lastElementChild.classList.add("btn-secondary")
+        btn.parentElement.lastElementChild.classList.add("bi-pencil-fill");
+        btn.parentElement.lastElementChild.classList.remove("btn-success")
+        btn.parentElement.lastElementChild.classList.remove("bi-check-circle-fill");
+        row.classList.add('item-done');
+    }else{
+        row.classList.remove('item-done');
+        btn.parentElement.lastElementChild.classList.remove("btn-secondary")
+        btn.parentElement.lastElementChild.classList.remove("bi-pencil-fill");
+        btn.parentElement.lastElementChild.classList.add("btn-success")
+        btn.parentElement.lastElementChild.classList.add("bi-check-circle-fill");
+    } 
 }

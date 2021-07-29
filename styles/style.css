@@ -1,0 +1,17 @@
+.markdone{
+    background-color: white;
+    border-color: grey;
+    
+}
+
+.mark-done .mark-done-checkbox{
+    background-color: red;
+}
+
+.mark-done-checkbox{
+    background-color: aqua;
+}
+
+.item-done{
+    background-color: lightgreen;
+}
