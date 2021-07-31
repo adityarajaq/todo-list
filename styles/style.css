@@ -1,17 +1,59 @@
-.markdone{
-    background-color: white;
-    border-color: grey;
-    
+
+.top-container{
+    background-color: #8cd3ff;
+    height: 15em;
+    margin-top: 2em;
+    padding-top: 2em;
 }
 
-.mark-done .mark-done-checkbox{
-    background-color: red;
+.white-font{
+    color: white;
+    font-weight: 150;
 }
 
-.mark-done-checkbox{
-    background-color: aqua;
+.font-size-5{
+    font-size: 5em;
 }
 
-.item-done{
-    background-color: lightgreen;
+.section-header{
+    color: gray;
+    font-weight: 150;
+}
+
+.completed-task{
+    background-color: #f2f2f2;
+    color: gray;
+}
+
+.custom-todo-row{
+    padding: 5px;
+}
+
+.delete-item-btn{
+    background-color: #ff857a;
+}
+
+.mark-done-btn{
+    background-color: #77df79;
+}
+
+.reopen-btn{
+    background-color: #d291bc;
+}
+
+.add-item-btn{
+    background-color: #006ee6;
+}
+
+.custom-btn{
+    color: white;
+}
+.custom-btn:hover{
+    color: lightgray;
+}
+
+.custom-input-label{
+    color: #003d80;
+    font-weight: 175;
+    font-size: 1.2em;
 }

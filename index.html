@@ -10,39 +10,59 @@
         </title>
     </head>
     <body>  
-            <div class="container mb-3">
-                <div class="row">
-                    <h1>What do you want to do today?</h1>
+            <div class="container mb-3 rounded-3 top-container">
+                <div class="row justify-content-between align-items-end">
+                    <div class="col-6">
+                        <span class="fs-1 col white-font">What do you want to do today?</span>
+                    </div>
+                    <div class="col-auto">
+                        <span class="white-font font-size-5" id="header-clock"></span>
+                        <span class="fs-1 white-font" id="header-clock-ampm"></span>
+                    </div>
                 </div>
-                <div class="row align-items-center">
-                    <div class='col'>
+                <div class="row justify-content-start custom-todo-row align-items-center">
+                    <div class='col-3'>
                         <div class="form-floating">
-                            <input class="form-control" type="text" aria-label ="category" placeholder = "category" id="task-category">
-                            <label for="task-category">Category</label>
+                            <input class="form-control custom-input" type="text" aria-label ="category" placeholder = "category" id="task-category">
+                            <label for="task-category" class="custom-input-label">add a task</label>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-7">
                         <div class="form-floating">
                             <input class="form-control" type="text" aria-label="task description" placeholder="description" id="task-description">
-                            <label for="task-description">Description</label>
+                            <label for="task-description" class="text-center custom-input-label">add a description</label>
                         </div>
                     </div>
-                    <div class="col">
-                        <button type="button" aria-label="add item" id="add-item-btn" class="btn btn-primary bi bi-plus-circle-fill"></button>
+                    <div class="col-auto" 
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="bottom"
+                    title="add item">
+                        <button type="button" 
+                        aria-label="add item" 
+                        id="add-item-btn" 
+                        class="btn custom-btn add-item-btn bi bi-plus-circle-fill"
+                        ></button>
                     </div>
                 </div>
             </div>
 
             <div class="container mb-3"> 
-                <div class="row">
-                    <h1>Tasks</h1>
+                <div class="row" id="open-tasks-header">
+                    <h2 class="section-header">To do</h2>
                 </div>
                 <div class="container" id="to-do-list">
+                </div>
+            </div>
+            <div class="container mb-3"> 
+                <div class="row" id="done-tasks-header">
+                    <h2 class="section-header">Done</h2>
+                </div>
+                <div class="container" id="completed-list">
 
                 </div>
             </div>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script><script src="scripts/script.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script><script src="scripts/script.js"></script>
     </body>
 </html>
